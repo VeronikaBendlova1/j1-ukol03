@@ -10,6 +10,46 @@ public class Pocitac {
     private Pamet ram;
     private Disk pevnyDisk;
 
+    public void vytvorSouborOVelikosti(long velikost)
+    {
+        if(jeZapnuty)
+        {
+           if (pevnyDisk.getKapacita() < pevnyDisk.getVyuziteMisto() + velikost)
+               System.err.println("Na disk se už nic víc nevejde, je plný");
+               else
+           {
+               pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto()+ velikost);
+               System.out.println("Soubor byl přidán na disk");
+
+           }
+
+        }
+        else
+        {
+            System.out.println("Počítač je vypnutý a nepracuje");
+        }
+
+    }
+    public void vymazSouboryOVelikost(long velikost)
+    {
+        if (jeZapnuty())
+            if (pevnyDisk.getVyuziteMisto() - velikost < 0)
+            {
+                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto() - velikost);
+                System.out.println("Soubor byl vymazán z disku, místo uvolněno");
+            }
+        else
+            {
+                pevnyDisk.getVyuziteMisto();
+                System.out.println("Využité místo na disku nemůže jít do minusu!");
+            }
+        else
+        {
+            System.out.println("Jsem vyplý a nepracuju ");
+        }
+
+
+    }
 
 
     public boolean jeZapnuty() {
@@ -20,7 +60,7 @@ public class Pocitac {
         if (cpu == null || ram == null || pevnyDisk == null) {
             jeZapnuty = false;
             System.err.println("Pocitac se neda zapnout: nejsou veskere nutne soucasti");
-        } else if (jeZapnuty == true) {
+        } else if (jeZapnuty) {
             System.err.println("Pozor! Pocitac je jiz zapnuty");
         } else {
             jeZapnuty = true;

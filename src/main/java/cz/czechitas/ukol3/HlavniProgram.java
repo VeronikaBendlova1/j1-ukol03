@@ -29,11 +29,15 @@ public class HlavniProgram {
         mujpocitac.setRam(mojepamet);
         System.out.println(mujpocitac);
 
-        mujpocitac.vypniSe();
+
         mujpocitac.zapniSe();
+        System.out.println("Počítač je zapnutý");
         mujpocitac.zapniSe();
+        System.err.println("Počítač je již zapnutý, nezapínejte znova");
         mujpocitac.vypniSe();
+        System.out.println("Počítač je vypnutý");
         mujpocitac.vypniSe();
+        System.out.println("Počítač nejlze vypnout podruhé");
 
 
 

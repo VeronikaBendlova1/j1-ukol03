@@ -8,7 +8,7 @@ public class Pamet {
 
 
 
-    public Long getKapacita() {
+    public long getKapacita() {
         return kapacita;
     }
 
