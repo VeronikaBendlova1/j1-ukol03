@@ -11,38 +11,6 @@ public class Pocitac {
     private Disk pevnyDisk;
 
 
-   /* public void vytvorSouborOVelikosti(long velikost) {
-        if (jeZapnuty==true) {
-            if ((velikost + pevnyDisk.getVyuziteMisto()) > pevnyDisk.getKapacita()) {
-                if ((velikost + druhyDisk.getVyuziteMisto()) > druhyDisk.getKapacita()) {
-                    System.err.println("Dalsi soubor se nevejde na zadny z disku");
-                } else {
-                    druhyDisk.setVyuziteMisto(velikost + druhyDisk.getVyuziteMisto());
-                    System.out.println("Novy soubor je nahran na 2. disk, aktualni kapacita: " + druhyDisk.getVyuziteMisto());
-                }
-            } else {
-                pevnyDisk.setVyuziteMisto(velikost + pevnyDisk.getVyuziteMisto());
-                System.out.println("Novy soubor je nahran na 1. disk, aktualni kapacita: " + pevnyDisk.getVyuziteMisto());
-            }
-        }
-    }
-
-    public void vymazSouboryOVelikosti(long velikost) {
-        if (jeZapnuty == true) {
-            if (velikost > pevnyDisk.getVyuziteMisto() && velikost > druhyDisk.getVyuziteMisto()) {
-                System.err.println("Pozor! Nepovolena velikost souboru, neda se smazat");
-            } else if (velikost <= druhyDisk.getVyuziteMisto()) {
-                druhyDisk.setVyuziteMisto(druhyDisk.getVyuziteMisto()-velikost);
-                System.out.println("Soubor je vymazan z 2. disku, aktualni vyuzite misto: " + druhyDisk.getVyuziteMisto());
-            } else {
-                pevnyDisk.setVyuziteMisto(pevnyDisk.getVyuziteMisto()-velikost);
-                System.out.println("Soubor je vymazan z 1. disku, aktualni vyuzite misto: " + pevnyDisk.getVyuziteMisto());
-            }
-        }
-    }*/
-
-
-
 
     public boolean jeZapnuty() {
         return jeZapnuty;
